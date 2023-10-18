@@ -4,6 +4,8 @@ import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.classifiers.functions.Logistic;
 
+// may need to add wk
+
 public class MainClass {
 
     public static void main(String args[]){
@@ -17,7 +19,5 @@ public class MainClass {
 
             throw new IllegalArgumentException("File could not be opened.");
         }
-
-
     }
 }

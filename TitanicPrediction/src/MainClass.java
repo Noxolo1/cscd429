@@ -5,7 +5,6 @@ import weka.classifiers.Evaluation;
 import weka.classifiers.functions.Logistic;
 import weka.gui.explorer.Explorer;
 
-// may need to add wk
 
 public class MainClass {
 

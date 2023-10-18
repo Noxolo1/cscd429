@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TitanicPrediction CSCD429.iml" filepath="$PROJECT_DIR$/TitanicPrediction CSCD429.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TitanicPrediction.iml" filepath="$PROJECT_DIR$/TitanicPrediction.iml" />
     </modules>
   </component>
 </project>

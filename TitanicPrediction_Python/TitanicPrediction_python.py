@@ -22,29 +22,30 @@ import seaborn as sns
 
 
 # import training data using specified path
-df = pd.read_csv('/Users/nwilson/Documents/GitHub/cscd429/TitanicPrediction_Python/Data/train.csv')
-print(df)
+df_train = pd.read_csv('/Users/nwilson/Documents/GitHub/cscd429/TitanicPrediction_Python/Data/train.csv')
+print(df_train)
 
-# get some info on data
-df.shape()
-df.head()
+#df_test = pd.read_csv('/Users/nwilson/Documents/GitHub/cscd429/TitanicPrediction_Python/Data/test.csv')
+#print(df_test)
+
+# drop useless attributes for now
+df_train.drop(labels = ["Cabin", "Embarked", "Name", "PassengerId", "Ticket"], inplace = True, axis = 1)
+#print(df_train)
 
 
 
 def knn(k, ):
-
-
+    
     return
 
 
-
 # function to calculate euclidean distance between 2 points
-def euclidDistance(p,q):
+def euclidean_distance(p,q):
     
     # subtract 2 vectors
     result = p - q
 
-    # transpose array and dot product with non transpose, to get 
+    # transpose array and dot product with original array, to get 
     # sum of squared terms, then sqrt
     return np.sqrt(np.dot(result.tranpose, result))
 

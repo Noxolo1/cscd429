@@ -13,9 +13,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2WwcnLUkBkhfQGflYLMKrD6oaRu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,7 +27,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/nwilson/Documents/GitHub/cscd429/TitanicPrediction",
+    "last_opened_file_path": "C:/Users/Nate/Documents/GitHub/cscd212-f23-lab3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -44,6 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697647249219</updated>
       <workItem from="1697647250234" duration="625000" />
+      <workItem from="1698105273759" duration="44000" />
     </task>
     <servers />
   </component>

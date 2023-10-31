@@ -12,9 +12,6 @@ library(rpart.plot)
 # imported mushrooms into r
 str(mushrooms)
 
-
-
-
 # step 2
 # veil type attribute only contains the letter p
 # this attribute may not be useful for classification as it could
@@ -42,8 +39,11 @@ chisq.test(mushrooms_contingency_table)
 # is extremely low 
 
 # step 2.2.3
-dt = sort(sample(nrow(df_mushrooms), nrow(df_mushrooms)*.8))
-train_mushroom <-data[dt,]
-test_mushroom <-data[!dt,]
+dt <- sample(nrow(df_mushrooms), nrow(df_mushrooms)*0.8)
+train_mushroom <- df_mushrooms[dt, ]
+test_mushroom <- df_mushrooms[-dt, ]
+str(train_mushroom)
+str(test_mushroom)
 
+# step 
 

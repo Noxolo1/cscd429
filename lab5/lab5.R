@@ -39,11 +39,43 @@ chisq.test(mushrooms_contingency_table)
 # is extremely low 
 
 # step 2.2.3
-dt <- sample(nrow(df_mushrooms), nrow(df_mushrooms)*0.8)
+dt <- sample(nrow(df_mushrooms), nrow(df_mushrooms)*0.8, replace=FALSE)
 train_mushroom <- df_mushrooms[dt, ]
 test_mushroom <- df_mushrooms[-dt, ]
 str(train_mushroom)
 str(test_mushroom)
 
-# step 
+# step 3.1
+decision_tree <- rpart(type~., data=train_mushroom)
+rpart.plot(decision_tree)
+
+# step 3.2
+predictions <- predict(decision_tree, newdata = test_mushroom, type = "class") 
+
+# convert characters to factors
+test_mushroom$type <- as.factor(test_mushroom$type)
+
+# make sure both vars have same level of class label
+# should be e and p
+levels(test_mushroom$type)
+levels(predictions)
+
+confusion_matrix <- confusionMatrix(predictions, test_mushroom$type)
+print(confusion_matrix)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

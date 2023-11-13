@@ -1,5 +1,5 @@
 # import data
-synthetic_control_data <- read.csv("~/Downloads/synthetic_control_data.csv", header=FALSE)
+synthetic_control_data <- read.csv("C:\\Users\\Nate\\Downloads\\synthetic_control_data.csv", header=FALSE)
 View(synthetic_control_data)
 
 # perform clustering with kmeans and k = 6
@@ -18,11 +18,20 @@ cluster5_data <- subset(synthetic_control_data, cluster == 5)
 cluster6_data <- subset(synthetic_control_data, cluster == 6)
 View(cluster1_data)
 
-# import ggplot
+# import plotting tools
+install.packages("GGally")
 library(ggplot2)
-library(tidyr) 
-library(MASS)
+library(GGally)
 
-parcoord(cluster1_data[,c(1:60)] )
-parcoord(cluster1_data[,c(1:60)] , col= "red", ylim = c(0, 1))
+# plot clusters
+ggparcoord(data = cluster6_data[, c(1:60)], 
+           columns = 1:60,
+           showPoints = FALSE,
+           title = "Plot for Cluster 6",
+           scale = "globalminmax",
+           mapping = aes(color = "red")) +
+           scale_x_discrete(labels = paste(" ", 1:60)) +
+           labs(x = "Time", y = NULL) 
+
+
 

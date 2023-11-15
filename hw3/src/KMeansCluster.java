@@ -1,10 +1,11 @@
-public class kMeansCluster {
+public class KMeansCluster {
 
-    public static  importData(){}
+    public static void importData(){}
 
 
     public static void kMeans(){
-        /* Inputs -> D – dataset with n objects
+        /*
+        • Inputs -> D – dataset with n objects
         • Output-> set of k clusters
         • Method
         (1) arbitrarily select k objects from D as the initial
@@ -15,8 +16,6 @@ public class kMeansCluster {
         (3) update cluster centroid using objects in each cluster
         (4) Repeat (2) and (3) until the criterion function
         converges (no redistribution of objects in any cluster)*/
-
-
 
     }
     

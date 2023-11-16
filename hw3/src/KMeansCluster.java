@@ -1,6 +1,5 @@
 public class KMeansCluster {
 
-    public static void importData(){}
 
 
     public static void kMeans(){

@@ -41,7 +41,7 @@ public class KMeansCluster {
         ArrayList<DataPoint> data = new ArrayList<>();
 
         try {
-            File file = new File("C:\\Users\\Nate\\Documents\\GitHub\\cscd429\\hw3\\synthetic_control_data.txt");
+            File file = new File("/Users/nwilson/Documents/GitHub/cscd429/hw3/synthetic_control_data.txt");
             Scanner kb = new Scanner(file);
 
             while (kb.hasNext()) {
@@ -209,7 +209,7 @@ public class KMeansCluster {
             try (FileWriter writer = new FileWriter(fileName)) {
 
                 for (DataPoint dataPoint : clusters.get(i)) {
-                    // Concatenate attributes and write as a single line
+                    // write attributes as a single line
                     String line = "";
                     for (double attribute : dataPoint.attributes) {
                         line += attribute + " ";

@@ -24,10 +24,10 @@ library(ggplot2)
 library(GGally)
 
 # plot clusters
-ggparcoord(data = cluster6_data[, c(1:60)], 
+ggparcoord(data = cluster5_data[, c(1:60)], 
            columns = 1:60,
            showPoints = FALSE,
-           title = "Plot for Cluster 6",
+           title = "Plot for Cluster 5",
            scale = "globalminmax",
            mapping = aes(color = "red")) +
            scale_x_discrete(labels = paste(" ", 1:60)) +

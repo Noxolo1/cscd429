@@ -6,23 +6,17 @@ View(data)
 install.packages("arules")
 library(arules)
 
-install.packages("devtools")
-
-# Install fim4r package
-devtools::install_github("mhahsler/arules", force = TRUE)
-library(arules)
-
+# Assuming data is a data frame with TRUE/FALSE values
 transactions <- as(data, "transactions")
 
-# Apply FP-Growth algorithm
-frequent_itemsets <- apriori(transactions, support = 0.4, 
-                           confidence = 1.0, verbose = TRUE)
+# Use the Apriori algorithm to find frequent itemsets
+frequent_itemsets <- apriori(transactions, parameter = list(support = 0.4, confidence = 1))
 
-# Extract Closed Frequent Itemsets
-closed_itemsets <- is.closed(frequent_itemsets)
+# Extract association rules from frequent itemsets
+association_rules <- as(frequent_itemsets, "rules")
 
 # Display frequent itemsets
 inspect(frequent_itemsets)
 
-# Display closed frequent itemsets
-inspect(closed_itemsets)
+# Display association rules
+inspect(association_rules)
